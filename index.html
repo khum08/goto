@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不智能助手</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #171921;
+        }
+
+        body {
+            display: flex;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div style="font-size: 24px;color: white; padding-bottom: 20px;" id="timecounter">网站已迁移，5s后将跳转</div>
+        <a style="font-size: 24px;font-weight: 700; color: rgba(255, 0, 0, 0.77);margin-top: 8px;"
+            href="https://chat.ailife792.top/">https://chat.ailife792.top/</a>
+    </div>
+    <script>
+        window.onload = function () {
+            console.log("window.onload");
+            let time = 5;
+            let timer = setInterval(function () {
+                time--;
+                document.getElementById('timecounter').innerHTML = '网站已迁移，' + time + 's后将跳转';
+                if (time == 0) {
+                    clearInterval(timer);
+                    window.location.href = 'https://chat.ailife792.top/';
+                }
+            }, 1000);
+
+        }
+    </script>
+</body>
+
+</html>
